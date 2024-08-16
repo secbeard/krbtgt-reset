@@ -12,9 +12,9 @@ All operation requires domain admins privilege.
 Copy the file to the NETLOGON fol
 
 
-
-
-
+Version 1:
+c8475640c6cd6db6f97e27e651cd42e8ea3ca8a0078584bafdd83e7c4b801a40  krbtgt_reset.ps1
+62271109dcd91ecdf7e84b8b0c73aa028f36272d352b42b96fb82faa81cbdf48  ScheduledTasks.xml
 
 The password generation functions have been reused from:
 https://github.com/microsoftarchive/New-KrbtgtKeys.ps1/blob/master/New-KrbtgtKeys.ps1
