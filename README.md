@@ -40,7 +40,7 @@ Set the task to run as SYSTEM and run with hih privileges whether user logged or
 Create a trigger that will fits your needs, daily might be aggressive but I would recommend it if a breach is suspected.
 
 Weekly for normal operations.
-Daily for a breached or assumed breached scénario
+Daily for a breached or assumed breached scenario
 
 ![image](https://github.com/user-attachments/assets/dc5230af-becc-428a-95fd-79891301a190)
 
