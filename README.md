@@ -39,8 +39,9 @@ Set the task to run as SYSTEM and run with hih privileges whether user logged or
 
 Create a trigger that will fits your needs, daily might be aggressive but I would recommend it if a breach is suspected.
 
-Weekly for normal operations.
-Daily for a breached or assumed breached scenario
+	Weekly for normal operations.
+
+	Daily for a breached or assumed breached scenario
 
 ![image](https://github.com/user-attachments/assets/dc5230af-becc-428a-95fd-79891301a190)
 
@@ -48,17 +49,17 @@ For the actions section select start a program.
 
 Command
 
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
+	%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
   
 Arguments (replace with with your script file location, use FQDN path if the location is on the network like the NETLOGON share).
   
--noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
+	-noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
 
 ![image](https://github.com/user-attachments/assets/78db32fe-0b87-4c77-bf3a-542e89d8d082)
 
 Optionnaly you can add a check to make sure powershell is available.
 
-  "%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe"
+	"%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe"
 
 ![image](https://github.com/user-attachments/assets/f7d1846f-07ce-46bb-aac1-2b1ae904b478)
 
@@ -85,9 +86,9 @@ The DC is not the PDC
 SHA256
 Version 1:
 
-c8475640c6cd6db6f97e27e651cd42e8ea3ca8a0078584bafdd83e7c4b801a40  krbtgt_reset.ps1
-
-62271109dcd91ecdf7e84b8b0c73aa028f36272d352b42b96fb82faa81cbdf48  ScheduledTasks.xml
+	c8475640c6cd6db6f97e27e651cd42e8ea3ca8a0078584bafdd83e7c4b801a40  krbtgt_reset.ps1
+	
+	62271109dcd91ecdf7e84b8b0c73aa028f36272d352b42b96fb82faa81cbdf48  ScheduledTasks.xml
 
 The password generation functions have been borrowed from:
 
