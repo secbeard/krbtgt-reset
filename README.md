@@ -1,16 +1,17 @@
 # krbtgt-reset
 GPO configuration to reset the krbtgt password in a safe way and mitigate golden ticket impact
 
-  Does not required a user account as the task will be executed with SYSTEM privilege on a domain controller.
-  It is scheduled by GPO and applied to the domain controllers OU
-  
+This script ensures the KRBTGT password is updated securely and consistently across the domain, while also checking for replication issues and logging relevant events.
+
+Does not required a user account as the task will be executed with SYSTEM privilege on a domain controller.
+It is scheduled by GPO and applied to the domain controllers OU, but only the DC with the PDC FSMO role will execute the task.
+
+
+Instructions:
 
 The script file should be stored in a location that is only writeable by domain admins.
 Since the SYSVOL exists for that purpose and it is replicated, we will use this.
 All operation requires domain admins privilege.
-
-
-Instructions:
 
 Copy the file to the NETLOGON folder
 
@@ -39,11 +40,12 @@ Create a trigger that will fits your needs, daily might be aggressive but I woul
 For the actions section select start a program.
 
 Command
-  %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
+
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
   
 Arguments (replace with with your script file location, use FQDN path if the location is on the network like the NETLOGON share)
   
-  -noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
+-noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
 
 ![image](https://github.com/user-attachments/assets/78db32fe-0b87-4c77-bf3a-542e89d8d082)
 
@@ -71,7 +73,6 @@ Password is to recent to be changed
 The DC is not the PDC
 
 ![image](https://github.com/user-attachments/assets/6cd91462-ed65-4cda-9132-99cfd028596c)
-
 
 
 Version 1:
