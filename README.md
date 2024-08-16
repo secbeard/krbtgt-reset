@@ -51,7 +51,7 @@ Command
 
 	%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
   
-Arguments (replace with with your script file location, use FQDN path if the location is on the network like the NETLOGON share).
+Arguments (replace with your script file location, use FQDN path if the location is on the network like the NETLOGON share).
   
 	-noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
 
