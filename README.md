@@ -65,6 +65,9 @@ Optionnaly you can add a check to make sure powershell is available.
 
 Report of the GPO configuration for validations.
 
+![image](https://github.com/user-attachments/assets/83a04ef7-0fc2-4f0a-9ce2-f83f234b8e36)
+
+
 ![image](https://github.com/user-attachments/assets/be297cba-cfe6-4aa5-9fbe-a860f3987ae2)
 
 
