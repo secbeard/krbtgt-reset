@@ -27,6 +27,15 @@ Set the task to run as SYSTEM and run with hih privileges whether user logged or
 
 ![image](https://github.com/user-attachments/assets/0c72d0bc-907a-42cd-a7a4-3b292dc2d78c)
 
+Create a trigger that will fits your needs, daily might be aggressive but I would recommend it if a breach is suspected.
+
+![image](https://github.com/user-attachments/assets/dc5230af-becc-428a-95fd-79891301a190)
+
+For the actions section select start a program.
+
+
+![image](https://github.com/user-attachments/assets/78db32fe-0b87-4c77-bf3a-542e89d8d082)
+
 
 The logs are visible in the Application logs
 
