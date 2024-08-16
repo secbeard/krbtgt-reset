@@ -11,18 +11,19 @@ All operation requires domain admins privilege.
 
 Copy the file to the NETLOGON fol
 
-Create a new GPO under 
-![image](https://github.com/user-attachments/assets/4522295d-b28a-440d-ad1e-381074466394)
+Create a new GPO under the Domain controllers OU.
 
-Disable the User configuration as only computer related settings are implemented
+![image](https://github.com/user-attachments/assets/c27eb474-94c2-4d0a-b8c1-361103d090d6)
+
+Disable the User configuration as only computer related settings are implemented.
 
 ![image](https://github.com/user-attachments/assets/2000779f-bd37-4eba-a0f1-603a642232dd)
 
-Create a scheduled task in the Preference section of Computer
+Create a scheduled task in the Preference section of Computer.
 
 ![image](https://github.com/user-attachments/assets/93fef0b4-3ab8-44c7-b25c-de27f00e577d)
 
-Set the task to run as SYSTEM and run with hih privileges whether user logged or not
+Set the task to run as SYSTEM and run with hih privileges whether user logged or not.
 
 ![image](https://github.com/user-attachments/assets/0c72d0bc-907a-42cd-a7a4-3b292dc2d78c)
 
