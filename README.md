@@ -12,5 +12,9 @@ All operation requires domain admins privilege.
 Copy the file to the NETLOGON fol
 
 
+
+
+
+
 The password generation functions have been reused from:
 https://github.com/microsoftarchive/New-KrbtgtKeys.ps1/blob/master/New-KrbtgtKeys.ps1
