@@ -10,6 +10,7 @@ Since the SYSVOL exists for that purpose and it is replicated, we will use this.
 All operation requires domain admins privilege.
 
 Copy the file to the NETLOGON fol
+![image](https://github.com/user-attachments/assets/4522295d-b28a-440d-ad1e-381074466394)
 
 
 Version 1:
