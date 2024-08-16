@@ -77,7 +77,7 @@ Password change successful
 
 ![image](https://github.com/user-attachments/assets/ff2561c5-8558-4be4-ab8d-3cc6b5ef7437)
 
-Password is to recent to be changed
+Password is too recent to be changed
 
 ![image](https://github.com/user-attachments/assets/2216bb43-6048-4b84-b9fc-0cacceaacd08)
 
