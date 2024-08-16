@@ -40,7 +40,9 @@ For the actions section select start a program.
 
 Command
   %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
+  
 Arguments (replace with with your script file location, use FQDN path if the location is on the network like the NETLOGON share)
+  
   -noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
 
 ![image](https://github.com/user-attachments/assets/78db32fe-0b87-4c77-bf3a-542e89d8d082)
