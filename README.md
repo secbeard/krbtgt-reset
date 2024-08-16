@@ -75,7 +75,7 @@ The logs are visible in the Event log under Application, here's a few examples:
 
 Password change successful
 
-![image](https://github.com/user-attachments/assets/ff2561c5-8558-4be4-ab8d-3cc6b5ef7437)
+![image](https://github.com/user-attachments/assets/26a5fc53-2eac-4162-9c8a-dfc8418e3ae3)
 
 Password is too recent to be changed
 
