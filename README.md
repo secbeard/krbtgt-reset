@@ -9,7 +9,12 @@ The script file should be stored in a location that is only writeable by domain 
 Since the SYSVOL exists for that purpose and it is replicated, we will use this.
 All operation requires domain admins privilege.
 
-Copy the file to the NETLOGON fol
+
+Instructions:
+
+Copy the file to the NETLOGON folder
+
+![image](https://github.com/user-attachments/assets/a76a42c5-8d43-4664-9168-a4b6629cbf73)
 
 Create a new GPO under the Domain controllers OU.
 
@@ -33,11 +38,33 @@ Create a trigger that will fits your needs, daily might be aggressive but I woul
 
 For the actions section select start a program.
 
+Command
+  %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
+Arguments (replace with with your script file location, use FQDN path if the location is on the network like the NETLOGON share)
+  -noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
 
 ![image](https://github.com/user-attachments/assets/78db32fe-0b87-4c77-bf3a-542e89d8d082)
 
+Optionnaly you can add a check to make sure powershell is available.
+  "%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe"
 
-The logs are visible in the Application logs
+![image](https://github.com/user-attachments/assets/f7d1846f-07ce-46bb-aac1-2b1ae904b478)
+
+Report of the GPO configuration
+
+![image](https://github.com/user-attachments/assets/be297cba-cfe6-4aa5-9fbe-a860f3987ae2)
+
+
+The logs are visible in the Application logs, here's a few examples:
+
+Password change successful
+
+![image](https://github.com/user-attachments/assets/ff2561c5-8558-4be4-ab8d-3cc6b5ef7437)
+
+Password is to recent to be changed
+
+![image](https://github.com/user-attachments/assets/2216bb43-6048-4b84-b9fc-0cacceaacd08)
+
 
 The DC is not the PDC
 
