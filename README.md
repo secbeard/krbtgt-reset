@@ -12,6 +12,11 @@ The script file should be stored in a location that is only writeable by domain 
 Since the SYSVOL exists for that purpose and it is replicated, we will use this.
 All operation requires domain admins privilege.
 
+You can adapt the script to your kerberos lifetime, by default it is 10 hours.
+The current configuration prevent a password change within 12 hours of the last password set time via the variable:
+
+$krbTGTMinTime = (Get-Date).AddHours(-12)
+
 Copy the file to the NETLOGON folder.
 
 ![image](https://github.com/user-attachments/assets/a76a42c5-8d43-4664-9168-a4b6629cbf73)
@@ -33,6 +38,9 @@ Set the task to run as SYSTEM and run with hih privileges whether user logged or
 ![image](https://github.com/user-attachments/assets/0c72d0bc-907a-42cd-a7a4-3b292dc2d78c)
 
 Create a trigger that will fits your needs, daily might be aggressive but I would recommend it if a breach is suspected.
+
+Weekly for normal operations.
+Daily for a breached or assumed breached scénario
 
 ![image](https://github.com/user-attachments/assets/dc5230af-becc-428a-95fd-79891301a190)
 
