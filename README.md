@@ -1,6 +1,5 @@
 # krbtgt-reset
-GPO configuration to reset the krbtgt password in a safe way and mitigate golden ticket impact
-
+GPO configuration to reset the krbtgt password in a safe way and mitigate golden ticket impact.
 This script ensures the KRBTGT password is updated securely and consistently across the domain, while also checking for replication issues and logging relevant events.
 
 Does not required a user account as the task will be executed with SYSTEM privilege on a domain controller.
@@ -13,7 +12,7 @@ The script file should be stored in a location that is only writeable by domain 
 Since the SYSVOL exists for that purpose and it is replicated, we will use this.
 All operation requires domain admins privilege.
 
-Copy the file to the NETLOGON folder
+Copy the file to the NETLOGON folder.
 
 ![image](https://github.com/user-attachments/assets/a76a42c5-8d43-4664-9168-a4b6629cbf73)
 
@@ -43,23 +42,24 @@ Command
 
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
   
-Arguments (replace with with your script file location, use FQDN path if the location is on the network like the NETLOGON share)
+Arguments (replace with with your script file location, use FQDN path if the location is on the network like the NETLOGON share).
   
 -noprofile -noninteractive -windowstyle hidden -ep bypass -file "\\lab1-dc1.lab1.local\NETLOGON\krbtgt_reset.ps1"
 
 ![image](https://github.com/user-attachments/assets/78db32fe-0b87-4c77-bf3a-542e89d8d082)
 
 Optionnaly you can add a check to make sure powershell is available.
+
   "%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe"
 
 ![image](https://github.com/user-attachments/assets/f7d1846f-07ce-46bb-aac1-2b1ae904b478)
 
-Report of the GPO configuration
+Report of the GPO configuration for validations.
 
 ![image](https://github.com/user-attachments/assets/be297cba-cfe6-4aa5-9fbe-a860f3987ae2)
 
 
-The logs are visible in the Application logs, here's a few examples:
+The logs are visible in the Event log under Application, here's a few examples:
 
 Password change successful
 
@@ -74,10 +74,13 @@ The DC is not the PDC
 
 ![image](https://github.com/user-attachments/assets/6cd91462-ed65-4cda-9132-99cfd028596c)
 
-
+SHA256
 Version 1:
+
 c8475640c6cd6db6f97e27e651cd42e8ea3ca8a0078584bafdd83e7c4b801a40  krbtgt_reset.ps1
+
 62271109dcd91ecdf7e84b8b0c73aa028f36272d352b42b96fb82faa81cbdf48  ScheduledTasks.xml
 
-The password generation functions have been reused from:
+The password generation functions have been borrowed from:
+
 https://github.com/microsoftarchive/New-KrbtgtKeys.ps1/blob/master/New-KrbtgtKeys.ps1
