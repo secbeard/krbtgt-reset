@@ -83,12 +83,11 @@ The DC is not the PDC
 
 ![image](https://github.com/user-attachments/assets/6cd91462-ed65-4cda-9132-99cfd028596c)
 
-SHA256
-Version 1:
+SHA256 for version 1:
 
-	c8475640c6cd6db6f97e27e651cd42e8ea3ca8a0078584bafdd83e7c4b801a40  krbtgt_reset.ps1
-	
-	62271109dcd91ecdf7e84b8b0c73aa028f36272d352b42b96fb82faa81cbdf48  ScheduledTasks.xml
+f7019a195ec57068fdc8afdf60734ae8ac71609eb36aeecee8f28d896176925f  krbtgt_reset.ps1
+
+62271109dcd91ecdf7e84b8b0c73aa028f36272d352b42b96fb82faa81cbdf48  ScheduledTasks.xml
 
 The password generation functions have been borrowed from:
 
