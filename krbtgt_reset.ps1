@@ -1,4 +1,5 @@
-﻿# Pascal Bourbonnais 2024
+﻿# Pascal Bourbonnais
+# https://github.com/secbeard/krbtgt-reset
 
 #region gen password
 
