@@ -13,7 +13,7 @@ Since the SYSVOL exists for that purpose and it is replicated, we will use this.
 
 *** Always use the DFS name of the sysvol for the script location ***
 
-In the screen capture, the path is wrong listing the server name as the path: 
+In the screen capture, the path is WRONG as it is using the server name path: 
 
 	\\lab1-dc1.lab1.local\netlogon\...
 It should be domain FQDN only:
