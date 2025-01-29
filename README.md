@@ -10,7 +10,9 @@ Instructions:
 All operation requires domain admins privilege.
 The script file should be stored in a location that is only writeable by domain admins.
 Since the SYSVOL exists for that purpose and it is replicated, we will use this.
+
 *** Always use the DFS name of the sysvol for the script location ***
+
 In the screen capture, the path is wrong listing the server name as the path: 
 \\lab1-dc1.lab1.local\netlogon\...
 It should be domain FQDN only:
