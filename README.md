@@ -7,10 +7,14 @@ It is scheduled by GPO and applied to the domain controllers OU, but only the DC
 
 
 Instructions:
-
+All operation requires domain admins privilege.
 The script file should be stored in a location that is only writeable by domain admins.
 Since the SYSVOL exists for that purpose and it is replicated, we will use this.
-All operation requires domain admins privilege.
+*** Always use the DFS name of the sysvol for the script location ***
+In the screen capture, the path is wrong listing the server name as the path: 
+\\lab1-dc1.lab1.local\netlogon\...
+It should be domain FQDN only:
+\\lab1.local\netlogon\..
 
 You can adapt the script to your kerberos lifetime, by default it is 10 hours.
 The current configuration prevent a password change within 12 hours of the last password set time via the variable:
